@@ -1,5 +1,5 @@
 <?php
-    include('Login/Login.php')
+    include('Login/Login.php');
 ?>
 
 <!DOCTYPE html>
@@ -31,15 +31,15 @@
                     <!-- input del password -->
                   <input id="LoginPassword" name="LoginPassword" type="password" class="form-control" placeholder="Contraseña" autocomplete="off" required>
                 </div>
-                <?php
-                    echo $ErrorLogin;
-                ?>
                 <div class="pb-4 d-grid g-0">
                     <button type="submit" class="btn btn-outline-primary">Submit</button>
                 </div>
               </form>
         </div>
     </div>
+    <?php
+        echo $ErrorLogin;
+    ?>
 
 <!--  -->    <!-- Scripts externos -->    <!--  -->
                     <!-- Bootstrap5 -->

@@ -5,7 +5,7 @@ if (isset($_SESSION['Usr'])) {
     header("Location: home.php");
 }
 
-include('Conexion.php');
+include('shared/Conexion.php');
 $ErrorLogin = '';
 
 if (isset($_POST['LoginUsername']) && isset($_POST['LoginPassword'])) {

@@ -1,5 +1,5 @@
 <?php
-  include ('Login/Val.php');
+  include ('shared/Val.php');
 ?>
 
 <!DOCTYPE html>
