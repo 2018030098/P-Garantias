@@ -18,24 +18,22 @@
             <div class="text-center p-2">
                 <h3>Login</h3>
             </div>
-            <form action="Login/Login.php" method="POST">
+            <form action="../index.php" method="POST">
                 <div class="mb-3">
                     <!-- input del username -->
-                  <input id="LoginUsername" name="LoginUsername" type="text" class="form-control" placeholder="Nombre de Usuario" autocomplete="off" required>
+                    <input id="LoginUsername" name="LoginUsername" type="text" class="form-control" placeholder="Nombre de Usuario" autocomplete="off" required>
                 </div>
                 <div class="mb-3">
                     <!-- input del password -->
-                  <input id="LoginPassword" name="LoginPassword" type="password" class="form-control" placeholder="Contraseña" autocomplete="off" required>
+                    <input id="LoginPassword" name="LoginPassword" type="password" class="form-control" placeholder="Contraseña" autocomplete="off" required>
                 </div>
                 <div class="pb-4 d-grid g-0">
                     <button type="submit" class="btn btn-outline-primary">Submit</button>
                 </div>
-              </form>
-              <?php
-                    if(isset($ErrorLogin)){
-                        echo "$ErrorLogin";
-                    }
-              ?>
+            </form>
+                <!-- <div class="container bg-danger opacity-75 <?php if($ErrorLogin != true){ echo "hidden"; } ?>">
+                    <p class="text-center p-2 text-white"> Usuario y/o contraseña incorrectos </p>
+                </div> -->
         </div>
     </div>
 
