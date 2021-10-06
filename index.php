@@ -1,3 +1,7 @@
+<?php
+    include('Login/Login.php')
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +22,7 @@
             <div class="text-center p-2">
                 <h3>Login</h3>
             </div>
-            <form action="Login/Login.php" method="POST">
+            <form action="index.php" method="POST">
                 <div class="mb-3">
                     <!-- input del username -->
                   <input id="LoginUsername" name="LoginUsername" type="text" class="form-control" placeholder="Nombre de Usuario" autocomplete="off" required>
@@ -31,11 +35,6 @@
                     <button type="submit" class="btn btn-outline-primary">Submit</button>
                 </div>
               </form>
-              <?php
-                    if(isset($ErrorLogin)){
-                        echo "$ErrorLogin";
-                    }
-              ?>
         </div>
     </div>
 

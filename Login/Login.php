@@ -1,10 +1,16 @@
 <?php
+
+session_start();
+if (isset($_SESSION['Usr'])) {
+    header("Location: home.html");
+}
+
 include('Conexion.php');
 
-    $Name = $_POST['LoginUsername'];
-    $Password = $_POST['LoginPassword'];
+$Name = $_POST['LoginUsername'];
+$Password = $_POST['LoginPassword'];
 
-if (!empty($Name) || !empty($Password)) {
+if (isset($Name) && isset($Password)) {
 
     $SELECT = "SELECT * from usuarios WHERE Username = ? AND Password = ?";
 
@@ -15,13 +21,15 @@ if (!empty($Name) || !empty($Password)) {
         $stmt -> store_result();    
         $val = $stmt -> num_rows(); 
         if($val == 1){ 
-            header("Location: ../../INSPINIA/inspinia_v2.9.3/HTML5_Full_Version/index.html");
+            $_SESSION['Usr'] = $Name;
+            header("Location: home.html");
         }else{
             $ErrorLogin = 
-                   ' <div class="container bg-danger opacity-75">
+                ' <div class="container bg-danger opacity-75">
                         <p class="text-center p-2 text-white"> Usuario y/o contraseña incorrectos </p>
                     </div>';
-            include_once 'login.html';
+            // include($ErrorLogin);
+            header('Location: index.php');
         }
     } catch (\Throwable $th) {
         echo "Problema al buscar el usuario";
