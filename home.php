@@ -29,6 +29,16 @@
           </div>
         </div>
       </nav>
+      <div class="container">
+      <div class="card m-5">
+        <div class="card-body text-center h3">
+          <?php
+            echo "Bienvenido ". $_SESSION['Usr'];
+          ?>
+        </div>
+      </div>
+      </div>
+      
 
 <!--  -->    <!-- Scripts externos -->    <!--  -->
                 <!-- Bootstrap5 -->

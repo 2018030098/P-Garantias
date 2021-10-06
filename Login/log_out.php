@@ -1,4 +1,5 @@
 <?php
+/*  Terminar con la sesion iniciada  */
     session_start();
 
     session_unset();

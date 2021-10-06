@@ -30,7 +30,6 @@ if (isset($_POST['LoginUsername']) && isset($_POST['LoginPassword'])) {
                     </h5>
                 </div>
             ';
-            // header('Location: index.php');
         }
     } catch (\Throwable $th) {
         echo "Problema al buscar el usuario";
