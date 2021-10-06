@@ -1,5 +1,5 @@
 <?php
-
+/*  Conexion a la base de datos  */
     $host = "localhost";
     $db_username = "root";
     $db_password = "";
@@ -12,5 +12,9 @@
         throw $th;
         die();
     }
+/*------------------------------*/
 
+/*  querys  */
+    $Sel_Validacion = "SELECT * from usuarios WHERE Username = ? AND Password = ?";
+/*----------*/
 ?>
