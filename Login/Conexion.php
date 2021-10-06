@@ -8,7 +8,7 @@
     try {
         $connection = new mysqli($host,$db_username,$db_password,$db_name);
     } catch (\Throwable $th) {
-        echo "Problema la realizar la conexion";
+        echo "Problema al realizar la conexion";
         throw $th;
         die();
     }
