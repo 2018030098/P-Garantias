@@ -1,0 +1,13 @@
+*::before::after {
+  box-sizing: border-box; }
+
+.MrgSty {
+  margin-top: 1.5rem; }
+
+.hidden-button {
+  border: #23c6c8 solid 0.5px;
+  color: #fff; }
+
+.hidden-button:hover {
+  background-color: #23c6c8;
+  color: #000; }
