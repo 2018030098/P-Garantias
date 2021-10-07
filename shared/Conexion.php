@@ -15,6 +15,6 @@
 /*------------------------------*/
 
 /*  querys  */
-    $Sel_Validacion = "SELECT * from usuarios WHERE Username = ? AND Password = ?";
+    $Sel_Login = "SELECT * from usuarios WHERE Username = ? AND Password = ?";
 /*----------*/
 ?>

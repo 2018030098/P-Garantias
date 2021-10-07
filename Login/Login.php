@@ -11,10 +11,10 @@ $ErrorLogin = '';
 if (isset($_POST['LoginUsername']) && isset($_POST['LoginPassword'])) {
 
     $Name = $_POST['LoginUsername'];
-    $Password = $_POST['LoginPassword'];
+    $Password = md5($_POST['LoginPassword']); 
 
     try {
-        $stmt = $connection -> prepare($Sel_Validacion); 
+        $stmt = $connection -> prepare($Sel_Login); 
         $stmt -> bind_param("ss",$Name,$Password);  
         $stmt -> execute(); 
         $stmt -> store_result();    
