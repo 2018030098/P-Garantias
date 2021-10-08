@@ -97,7 +97,94 @@
             </ul>
         </nav>
     </div>
+<!--  -->
+<div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>E-commerce payments</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a>E-commerce payments</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <strong>Payments</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
 
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="payment-card">
+                        <i class="fa fa-cc-visa payment-icon-big text-success"></i>
+                        <h2>
+                            **** **** **** 1060
+                        </h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <small>
+                                    <strong>Expiry date:</strong> 10/16
+                                </small>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <small>
+                                    <strong>Name:</strong> David Williams
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="payment-card">
+                        <i class="fa fa-cc-mastercard payment-icon-big text-warning"></i>
+                        <h2>
+                            **** **** **** 7002
+                        </h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <small>
+                                    <strong>Expiry date:</strong> 10/16
+                                </small>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <small>
+                                    <strong>Name:</strong> Anna Smith
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="payment-card">
+                        <i class="fa fa-cc-discover payment-icon-big text-danger"></i>
+                        <h2>
+                            **** **** **** 3466
+                        </h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <small>
+                                    <strong>Expiry date:</strong> 10/16
+                                </small>
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <small>
+                                    <strong>Name:</strong> Morgan Stanch
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+<!--  -->
     <script src="https://kit.fontawesome.com/6aa6c40f89.js" crossorigin="anonymous"></script>
 
     <!-- Mainly scripts -->
