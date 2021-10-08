@@ -99,108 +99,373 @@
     </div>
 <!--  -->
 <div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-8">
-        <h2>Calendar</h2>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="breadcrumb-item">
-                Extra pages
-            </li>
-            <li class="breadcrumb-item active">
-                <strong>Calendar</strong>
-            </li>
-        </ol>
-    </div>
-</div>
-<div class="wrapper wrapper-content">
-    <div class="row animated fadeInDown">
-        <div class="col-lg-3">
-            <div class="ibox ">
-                <div class="ibox-title">
-                    <h5>Draggable Events</h5>
-                    <div class="ibox-tools">
-                        <a class="collapse-link">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-wrench"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#" class="dropdown-item">Config option 1</a>
-                            </li>
-                            <li><a href="#" class="dropdown-item">Config option 2</a>
-                            </li>
-                        </ul>
-                        <a class="close-link">
-                            <i class="fa fa-times"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="ibox-content">
-                    <div id='external-events'>
-                        <p>Drag a event and drop into callendar.</p>
-                        <div class='external-event navy-bg'>Go to shop and buy some products.</div>
-                        <div class='external-event navy-bg'>Check the new CI from Corporation.</div>
-                        <div class='external-event navy-bg'>Send documents to John.</div>
-                        <div class='external-event navy-bg'>Phone to Sandra.</div>
-                        <div class='external-event navy-bg'>Chat with Michael.</div>
-                        <p class="m-t">
-                            <input type='checkbox' id='drop-remove' class="i-checks" checked /> <label for='drop-remove'>remove after drop</label>
-                        </p>
-                    </div>
+                <div class="col-lg-10">
+                    <h2>Static Tables</h2>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a>Tables</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            <strong>Static Tables</strong>
+                        </li>
+                    </ol>
                 </div>
             </div>
-            <div class="ibox ">
-                <div class="ibox-content">
-                    <h2>FullCalendar</h2> is a jQuery plugin that provides a full-sized, drag & drop calendar like the one below. It uses AJAX to fetch events on-the-fly for each month and is
-                    easily configured to use your own feed format (an extension is provided for Google Calendar).
-                    <p>
-                        <a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar documentation</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-9">
-            <div class="ibox ">
-                <div class="ibox-title">
-                    <h5>Striped Table </h5>
-                    <div class="ibox-tools">
-                        <a class="collapse-link">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-wrench"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#" class="dropdown-item">Config option 1</a>
-                            </li>
-                            <li><a href="#" class="dropdown-item">Config option 2</a>
-                            </li>
-                        </ul>
-                        <a class="close-link">
-                            <i class="fa fa-times"></i>
-                        </a>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-6">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <h5>Basic Table</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#" class="dropdown-item">Config option 1</a>
+                                </li>
+                                <li><a href="#" class="dropdown-item">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="ibox-content">
-                    <div id="calendar"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="footer">
-    <div class="float-right">
-        10GB of <strong>250GB</strong> Free.
-    </div>
-    <div>
-        <strong>Copyright</strong> Example Company &copy; 2014-2018
-    </div>
-</div>
+                    <div class="ibox-content">
 
-</div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <h5>Striped Table </h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#" class="dropdown-item">Config option 1</a>
+                                </li>
+                                <li><a href="#" class="dropdown-item">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Data</th>
+                                <th>User</th>
+                                <th>Value</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><span class="line">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                                <td>Samantha</td>
+                                <td class="text-navy"> <i class="fa fa-level-up"></i> 40% </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><span class="line">5,3,9,6,5,9,7,3,5,2</span></td>
+                                <td>Jacob</td>
+                                <td class="text-warning"> <i class="fa fa-level-down"></i> -20% </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><span class="line">1,6,3,9,5,9,5,3,9,6,4</span></td>
+                                <td>Damien</td>
+                                <td class="text-navy"> <i class="fa fa-level-up"></i> 26% </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Border Table </h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#" class="dropdown-item">Config option 1</a>
+                                    </li>
+                                    <li><a href="#" class="dropdown-item">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Hover Table  </h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#" class="dropdown-item">Config option 1</a>
+                                    </li>
+                                    <li><a href="#" class="dropdown-item">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Data</th>
+                                    <th>User</th>
+                                    <th>Value</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><span class="pie">0.52,1.041</span></td>
+                                    <td>Samantha</td>
+                                    <td class="text-navy"> <i class="fa fa-level-up"></i> 40% </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><span class="pie">226,134</span></td>
+                                    <td>Jacob</td>
+                                    <td class="text-warning"> <i class="fa fa-level-down"></i> -20% </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><span class="pie">0.52/1.561</span></td>
+                                    <td>Damien</td>
+                                    <td class="text-navy"> <i class="fa fa-level-up"></i> 26% </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Custom responsive table </h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#" class="dropdown-item">Config option 1</a>
+                                    </li>
+                                    <li><a href="#" class="dropdown-item">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div class="col-sm-5 m-b-xs"><select class="form-control-sm form-control input-s-sm inline">
+                                    <option value="0">Option 1</option>
+                                    <option value="1">Option 2</option>
+                                    <option value="2">Option 3</option>
+                                    <option value="3">Option 4</option>
+                                </select>
+                                </div>
+                                <div class="col-sm-4 m-b-xs">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-sm btn-white ">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Day
+                                        </label>
+                                        <label class="btn btn-sm btn-white active">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> Week
+                                        </label>
+                                        <label class="btn btn-sm btn-white">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> Month
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="input-group"><input placeholder="Search" type="text" class="form-control form-control-sm"> <span class="input-group-append"> <button type="button" class="btn btn-sm btn-primary">Go!
+                                    </button> </span></div>
+
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+
+                                        <th></th>
+                                        <th>Project </th>
+                                        <th>Completed </th>
+                                        <th>Task</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                        <td>Project<small>This is example of project</small></td>
+                                        <td><span class="pie">0.52/1.561</span></td>
+                                        <td>20%</td>
+                                        <td>Jul 14, 2013</td>
+                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                        <td>Alpha project</td>
+                                        <td><span class="pie">6,9</span></td>
+                                        <td>40%</td>
+                                        <td>Jul 16, 2013</td>
+                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                        <td>Betha project</td>
+                                        <td><span class="pie">3,1</span></td>
+                                        <td>75%</td>
+                                        <td>Jul 18, 2013</td>
+                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                        <td>Gamma project</td>
+                                        <td><span class="pie">4,9</span></td>
+                                        <td>18%</td>
+                                        <td>Jul 22, 2013</td>
+                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="float-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2018
+            </div>
+        </div>
+
+        </div>
 <!--  -->
     <script src="https://kit.fontawesome.com/6aa6c40f89.js" crossorigin="anonymous"></script>
 

@@ -36,7 +36,7 @@
                             <a  class="text-decoration-none" href="home.php"> 
                                 <span class="block m-t-xs font-bold text-center">
                                     <?php
-                                        echo $_SESSION['Usr'];
+                                        echo "hola ".$_SESSION['Usr'];
                                     ?>
                                 </span>
                                 <!-- <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> -->
@@ -77,9 +77,9 @@
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header">
-                        <a class="navbar-minimalize minimalize-styl-2 btn btn-success " href="#"><i class="fa fa-bars"></i> </a>
-                        <form role="search" class="navbar-form-custom" action="search_results.html">
-                            <div class="form-group">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-success" href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" action="">
+                            <div class="form-group bg-white shadow-sm rounded">
                                 <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
                             </div>
                         </form>
@@ -104,7 +104,7 @@
     <script src="javaScripts/jquery-3.1.1.min.js"></script>
     <script src="javaScripts/jquery-2.1.1.js"></script>
     <script src="javaScripts/popper.min.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <!-- <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> -->
     <script src="javaScripts/Bootstrap/bootstrap.min.js"></script>
     <script src="javaScripts/metisMenu/jquery.metisMenu.js"></script>
     <script src="javaScripts/slimscroll/jquery.slimscroll.min.js"></script>
