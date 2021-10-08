@@ -1,5 +1,8 @@
 <?php
 /*  Verificar que hay una sesion iniciada  */
+    if (!isset($_SESSION)) {
+        session_start();
+    }
     if (!isset($_SESSION['Usr'])) {
         header("Location: index.php");
     }

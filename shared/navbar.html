@@ -1,6 +1,3 @@
-<?php
-    include('shared/Val.php')
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +17,6 @@
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
 </head>
 <body>
     <div id="wrapper">
@@ -28,7 +24,7 @@
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header w-100">
-                        <div class="profile-element">
+                        <div class="profile-element dropdown">
                             <div class="p-1 bg-light rounded">
                                 <img src="img/Logo.png" alt="Imagen del logo" class="w-100">
                             </div>
@@ -42,29 +38,31 @@
                                 <!-- <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> -->
                             </a>
                         </div>
-                        <div class="logo-element bg-success">
+                        <div class="logo-element">
                             IN+
                         </div>
                     </li>
-                    <li class="<?php if($Active == 1){echo "active";} ?>">
-                        <a href="page-1.php" class="text-decoration-none ">
-                            <i class="fa fa-book"></i>
-                            <span> Pagina 1</span>
-                        </a>
+                    <li class='<?php if($Active == 1){echo "active";} ?>'>
+                        <a href="page-1.php" class="text-decoration-none"> <i class="fa fa-book"></i> <span class="nav-label">Pagina 1</span> </a>
+                        <!-- <ul class="nav nav-second-level">
+                            <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
+                            <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
+                            <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
+                        </ul> -->
                     </li>
-                    <li class="<?php if($Active == 2){echo "active";} ?>">
+                    <li class='<?php if($Active == 2){echo "active";} ?>'>
                         <a href="page-2.php" class="text-decoration-none ">
                             <i class="fa fa-book"></i>
                             <span> Pagina 2</span>
                         </a>
                     </li>
-                    <li class="<?php if($Active == 3){echo "active";} ?>">
+                    <li class='<?php if($Active == 3){echo "active";} ?>'>
                         <a href="page-3.php" class="text-decoration-none ">
                             <i class="fa fa-book"></i>
                             <span> Pagina 3</span>
                         </a>
                     </li>
-                    <li class="<?php if($Active == 4){echo "active";} ?>">
+                    <li class='<?php if($Active == 4){echo "active";} ?>'>
                         <a href="page-4.php" class="text-decoration-none ">
                             <i class="fa fa-book"></i>
                             <span> Pagina 4</span>
@@ -75,9 +73,9 @@
         </nav>
         <nav id="page-wrapper" class="gray-bg dashbard-1">
             <div class="row border-bottom">
-                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <nav class="navbar navbar-static-top " role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header">
-                        <a class="navbar-minimalize minimalize-styl-2 btn btn-success" href="#"><i class="fa fa-bars"></i> </a>
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary me-4" href="#"><i class="fa fa-bars"></i> </a>
                         <form role="search" class="navbar-form-custom" action="">
                             <div class="form-group bg-white shadow-sm rounded">
                                 <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
@@ -96,22 +94,20 @@
                 </li>
             </ul>
         </nav>
-<hr>
+        <hr>
         <?php
 
             echo($BodyHtml);
 
         ?>
-
     </div>
 
+<!--  -->         <!--  -->         <!--  -->         <!--  -->         <!--  -->         <!--  -->
     <script src="https://kit.fontawesome.com/6aa6c40f89.js" crossorigin="anonymous"></script>
-
+    
     <!-- Mainly scripts -->
     <script src="javaScripts/jquery-3.1.1.min.js"></script>
-    <script src="javaScripts/jquery-2.1.1.js"></script>
     <script src="javaScripts/popper.min.js"></script>
-    <!-- <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> -->
     <script src="javaScripts/Bootstrap/bootstrap.min.js"></script>
     <script src="javaScripts/metisMenu/jquery.metisMenu.js"></script>
     <script src="javaScripts/slimscroll/jquery.slimscroll.min.js"></script>
@@ -119,11 +115,12 @@
     <!-- Customs and plugin-->
     <script src="javaScripts/inspinia.js"></script>
     <script src="javaScripts/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="javaScripts/jquery-ui/jquery-ui.min.js"></script>
     
     <!-- toastr (notificaciones) -->
     <script src="javaScripts/toastr/toastr.min.js"></script>
 
-    <!-- jQuery UI -->
-    <script src="javaScripts/jquery-ui/jquery-ui.min.js"></script>
 </body>
 </html>
