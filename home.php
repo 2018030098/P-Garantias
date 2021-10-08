@@ -104,7 +104,7 @@
     <script src="javaScripts/jquery-3.1.1.min.js"></script>
     <script src="javaScripts/jquery-2.1.1.js"></script>
     <script src="javaScripts/popper.min.js"></script>
-    <!-- <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
     <script src="javaScripts/Bootstrap/bootstrap.min.js"></script>
     <script src="javaScripts/metisMenu/jquery.metisMenu.js"></script>
     <script src="javaScripts/slimscroll/jquery.slimscroll.min.js"></script>
