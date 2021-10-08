@@ -58,7 +58,7 @@
                             <span> Pagina 2</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="page-3.php" class="text-decoration-none">
                             <i class="fa fa-book"></i>
                             <span> Pagina 3</span>
