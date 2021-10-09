@@ -69,10 +69,6 @@
     </div>
 </div>
 <!--  -->    <!-- Scripts externos -->    <!--  -->
-                    <!-- Bootstrap5 -->
-    <script src="javaScripts/Bootstrap/bootstrap.js"></script>
-    <script src="javaScripts/Bootstrap/bootstrap.js.map"></script>
     <script src="javaScripts/Bootstrap/bootstrap.min.js"></script>
-    <script src="javaScripts/Bootstrap/bootstrap.min.js.map"></script>
 </body>
 </html>

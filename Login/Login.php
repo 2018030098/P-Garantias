@@ -25,11 +25,12 @@ if (isset($_POST['LoginUsername']) && isset($_POST['LoginPassword'])) {
         }else{
             $ErrorLogin = '
                 <div class="d-flex justify-content-center">
-                    <h5 class="bg-danger opacity-75 text-white text-center d-inline mb-3 p-2 border rounded shadow-sm">
-                        Usuario y/o contraseña incorrecto
-                    </h5>
+                    <div class="alert alert-danger bg-danger alert-dismissible text-center m-3 p-2 border rounded shadow-sm" role="alert">
+                        <h5 class="me-4 p-1">    Usuario y/o contraseña incorrecto   </h5> 
+                        <button type="button" class="d-flex btn-close align-items-center" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                 </div>
-            ';
+                ';
         }
     } catch (\Throwable $th) {
         echo "Problema al buscar el usuario";

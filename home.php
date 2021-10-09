@@ -8,5 +8,5 @@
             </div>
         </div>
         ";
-    include('shared/NavBars.php');
+    include('shared/navbar.html');
 ?>
