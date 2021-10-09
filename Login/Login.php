@@ -21,6 +21,7 @@ if (isset($_POST['LoginUsername']) && isset($_POST['LoginPassword'])) {
         $val = $stmt -> num_rows(); 
         if($val == 1){ 
             $_SESSION['Usr'] = $Name;
+            $_SESSION['Time'] = time();
             header("Location: home.php");
         }else{
             $ErrorLogin = '

@@ -16,5 +16,7 @@
 
 /*  querys  */
     $Sel_Login = "SELECT * from usuarios WHERE Username = ? AND Password = ?";
+    $Sel_NewAcount = "SELECT * from usuarios WHERE Username = ?";
+    $Ins_NewAcount = "INSERT INTO `usuarios`(`Username`, `Password`) VALUES ('?','?')";
 /*----------*/
 ?>

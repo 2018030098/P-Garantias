@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $Time = $_SESSION['Time'];
     $Usr = $_SESSION['Usr'];
     $BodyHtml = "
         <div class='container mx-5 my-5'>
