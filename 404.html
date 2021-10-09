@@ -1,0 +1,35 @@
+<?php
+    include('shared/Val.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Font-Awesome/font-awesome.min.css">
+</head>
+<body class="gray-bg d-flex align-items-center justify-content-center">
+    <div class="">
+        <div class="text-center animated fadeInDown ">
+            <h1 class="display-3">Error 404</h1>
+            <h3 class="font-bold">Pagina no encontrada</h3>
+
+            <div class="error-desc">
+                La pagina que estas buscando al parecer no existe
+                <form class="form-inline m-t justify-content-center" role="form">
+                    <input type="button" onclick="history.back()" name="Regresar" value="Regresar" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="javaScripts/jquery-3.1.1.min.js"></script>
+    <script src="javaScripts/popper.min.js"></script>
+    <script src="javaScripts/Bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
