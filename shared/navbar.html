@@ -28,19 +28,25 @@
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header w-100">
-                        <div class="profile-element dropdown">
-                            <div class="p-1 bg-light rounded">
-                                <img src="img/Logo.png" alt="Imagen del logo" class="w-100">
-                            </div>
-                            <!-- no funciona el dropdown -->
+                        <div class="profile-element">
                             <a  class="text-decoration-none" href="home.php"> 
-                                <span class="block m-t-xs font-bold text-center">
+                                <div class="p-1 bg-light rounded">
+                                    <img src="assets/img/Logo.png" alt="Imagen del logo" class="w-100">
+                                </div>
+                            </a>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle block m-t-xs font-bold text-center" data-bs-toggle="dropdown" href="">
                                     <?php
                                         echo $_SESSION['Usr'];
                                     ?>
-                                </span>
-                                <!-- <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> -->
-                            </a>
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="logo-element">
                             IN+
@@ -72,6 +78,12 @@
                             <span> Pagina 4</span>
                         </a>
                     </li>
+                    <li class="<?php if($Active == ''){echo 'active';} ?>">
+                        <a href="Pruebas.html" class="text-decoration-none ">
+                            <i class="fas fa-cogs"></i>
+                            <span> # Pruebas #</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -101,14 +113,14 @@
     </div>
 
 <!--  -->         <!--  -->         <!--  -->         <!--  -->         <!--  -->         <!--  -->
-    <script src="https://kit.fontawesome.com/6aa6c40f89.js" crossorigin="anonymous"></script>
-    
+
     <!-- Mainly scripts -->
     <script src="assets/javaScripts/jquery-3.1.1.min.js"></script>
     <script src="assets/javaScripts/popper.min.js"></script>
     <script src="assets/javaScripts/Bootstrap/bootstrap.min.js"></script>
     <script src="assets/javaScripts/metisMenu/jquery.metisMenu.js"></script>
     <script src="assets/javaScripts/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="https://kit.fontawesome.com/6aa6c40f89.js" crossorigin="anonymous"></script>
     
     <!-- Customs and plugin-->
     <script src="assets/javaScripts/inspinia.js"></script>

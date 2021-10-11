@@ -11,3 +11,7 @@
 .hidden-button:hover {
   background-color: #23c6c8;
   color: #000; }
+
+.color-out{
+  background: #80ac53;
+}

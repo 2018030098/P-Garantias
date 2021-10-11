@@ -21,7 +21,7 @@
     <div class="p-3">
         <div class="text-center">
             <!-- <h2 class="display-5">Logo</h2> -->
-            <img src="img/Logo.png" alt="Imagen del logo">
+            <img src="assets/img/Logo.png" alt="Imagen del logo">
         </div>
         <div class="my-3">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aliquam molestias unde doloremque minima optio?

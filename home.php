@@ -2,6 +2,7 @@
     session_start();
     $Time = $_SESSION['Time'];
     $Usr = $_SESSION['Usr'];
+    $Active = 0;
     $BodyHtml = "
         <div class='my-3'>
             <div class='card text-center'>
