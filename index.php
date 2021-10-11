@@ -10,10 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
 
-    <link rel="stylesheet" href="css/Bootstrap/bootstrap.min.css">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/MyStyles.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/MyStyles.css">
 </head>
 <body class="bg-secondary d-flex align-items-center justify-content-center">
 <div>
@@ -45,7 +45,7 @@
                 </div>
             </form>
             <!-- formulario el cual añade un boton para ir a registrar un nuevo usuario --> <!-- se encuentra escondido al no se necesario -->
-            <div class="d-none"> <!--  --> 
+            <div > <!-- class="d-none" --> 
                 <hr>
                 <div class="mb-3">
                     <p class="text-muted"> no tienes cuenta? </p>
@@ -67,6 +67,6 @@
     </div>
 </div>
 <!--  -->    <!-- Scripts externos -->    <!--  -->
-    <script src="javaScripts/Bootstrap/bootstrap.min.js"></script>
+    <script src="assets/javaScripts/Bootstrap/bootstrap.min.js"></script>
 </body>
 </html>

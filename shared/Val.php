@@ -2,8 +2,8 @@
 /*  Verificar que hay una sesion iniciada  */
 
     //tiempo para que la sesion se cierre de manera automatica
-    $tiempo =( 10 ) * 60;
-    //_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+    $tiempo = ( 10 ) * 60;
+    //_-_-_-_ minutos _-_-_-_-_-_-_-_-_-_-_-_-_-
 
     if (!isset($_SESSION)) {
         session_start();

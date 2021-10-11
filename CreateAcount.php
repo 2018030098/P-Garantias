@@ -12,9 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="css/Bootstrap/bootstrap.min.css">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-secondary d-flex align-items-center justify-content-center">
     <div>
@@ -55,7 +55,7 @@
     </div>
 
 <!--  -->    <!-- Scripts externos -->    <!--  -->
-    <script src="javaScripts/Bootstrap/bootstrap.min.js"></script>
+    <script src="assets/javaScripts/Bootstrap/bootstrap.min.js"></script>
 
 </body>
 </html>
