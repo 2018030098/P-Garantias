@@ -45,21 +45,24 @@
                 </div>
             </form>
             <!-- formulario el cual añade un boton para ir a registrar un nuevo usuario --> <!-- se encuentra escondido al no se necesario -->
-            <form action="CreateAcount.html" method="POST"  > <!-- class="d-none" --> 
+            <div class="d-none"> <!--  --> 
                 <hr>
                 <div class="mb-3">
                     <p class="text-muted"> no tienes cuenta? </p>
                 </div>
-                <div class="mb-3">
+                <a class="mb-3" href="CreateAcount.php">
                     <button type="submit" class="btn bg-info"> crea una cuenta</button>
-                </div>
-            </form>
+                </a>
+            </div>
         </div>
     </div>
 </div>
     <div class="animated fadeInDown">
         <?php
             echo $ErrorLogin;
+            if (isset($_SESSION['Msg'])) {
+                echo $_SESSION['Msg'];
+            }
         ?>
     </div>
 </div>

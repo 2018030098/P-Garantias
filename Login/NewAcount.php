@@ -1,7 +1,9 @@
 <?php
 
+session_start();
 include('shared/Conexion.php');
 $ErrorCreateAcount = '';
+unset($_SESSION['Msg']);
 
 if (isset($_POST['NewUsername']) && isset($_POST['NewPassword']) && isset($_POST['ConfirmPassword'])) {
 
@@ -16,33 +18,22 @@ if (isset($_POST['NewUsername']) && isset($_POST['NewPassword']) && isset($_POST
             $stmt -> store_result();    
             $val = $stmt -> num_rows(); 
             if($val == 0){ 
-                try {$stmt -> close();
+                try {
+                    $stmt -> close();
                     $stmt = $connection -> prepare($Ins_NewAcount); 
                     $stmt -> bind_param("ss",$Name,$Password);  
-                    $stmt -> execute(); 
-                    
-                    echo "
-                        <div class='modal fade' id='exampleModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
-                            <div class='modal-dialog'>
-                                <div class='modal-content text-center'>
-                                    <div class='modal-header'>
-                                        <h5 class='modal-title' id='exampleModalLabel'>Usuario Creado Exitosamente </h5>
-                                        <a href='index.php'>
-                                            <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
-                                        </a>
-                                    </div>
-                                    <div class='modal-body'>
-                                        <p>el Usuario: $Name</p>
-                                        <p>se creo con exito</p>
-                                    </div>
-                                </div>
-                            </div>
+                    $_SESSION['Msg'] = "
+                    <div class='d-flex justify-content-center'>
+                        <div class='alert alert-success bg-success alert-dismissible text-center m-3 p-2 border rounded shadow-sm' role='alert'>
+                            <h5 class='me-4 p-1'>    Usuario creado exitosamente   </h5> 
+                            <button type='button' class='d-flex btn-close align-items-center' data-bs-dismiss='alert' aria-label='Close'></button>
                         </div>
+                    </div>
                     ";
-                    // $_SESSION['Usr'] = $Name;
-                    // $_SESSION['Time'] = time();
-                    // header("Location: home.php");
-                    //code...
+                    $stmt -> execute(); 
+                    $_SESSION['Usr'] = $Name;
+                    $_SESSION['Time'] = time();
+                    header("Location: home.php");
                 } catch (\Throwable $th) {
                     echo "Problema al registrar usuario";
                     throw $th;
@@ -63,9 +54,9 @@ if (isset($_POST['NewUsername']) && isset($_POST['NewPassword']) && isset($_POST
         }
     } 
     else{
-        $ErrorLogin = '
+        $ErrorCreateAcount = '
             <div class="d-flex justify-content-center">
-                <div class="alert alert-warning bg-warning alert-dismissible text-center m-3 p-2 border rounded shadow-sm" role="alert">
+                <div class="alert alert-danger bg-danger alert-dismissible text-center m-3 p-2 border rounded shadow-sm" role="alert">
                     <h5 class="me-4 p-1">    Las contraseñas no Coinciden   </h5> 
                     <button type="button" class="d-flex btn-close align-items-center" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>

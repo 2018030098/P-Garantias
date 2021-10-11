@@ -20,7 +20,6 @@
     <div>
         <div class="middle-box text-center loginscreen animated fadeInDown gray-bg rounded shadow-lg">
             <div class="text-center">
-                <!-- <h2 class="display-5">Logo</h2> -->
                 <img src="img/Logo.png" alt="Imagen del logo">
             </div>
             <div class="p-3">
