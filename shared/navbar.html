@@ -79,7 +79,7 @@
                         </a>
                     </li>
                     <li class="<?php if($Active == ''){echo 'active';} ?>">
-                        <a href="Pruebas.html" class="text-decoration-none ">
+                        <a href="Pruebas2.html" class="text-decoration-none ">
                             <i class="fas fa-cogs"></i>
                             <span> # Pruebas #</span>
                         </a>
@@ -95,7 +95,11 @@
                     </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li style="padding: 20px">
-                    <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
+                    <span class="m-r-sm text-muted welcome-message">
+                        <?php
+                            echo "Bienvenido ".$_SESSION['Name'];
+                        ?>
+                    </span>
                 </li>
                 <li>
                     <a href="Login/log_out.php" class="text-decoration-none">

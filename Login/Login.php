@@ -10,19 +10,17 @@ $ErrorLogin = '';
 
 if (isset($_POST['LoginUsername']) && isset($_POST['LoginPassword'])) {
 
-    $Name = $_POST['LoginUsername'];
+    $Usr = $_POST['LoginUsername'];
     $Password = md5($_POST['LoginPassword']); 
 
     try {
         $stmt = $connection -> prepare($Sel_Login); 
-        $stmt -> bind_param("ss",$Name,$Password);  
+        $stmt -> bind_param("ss",$Usr,$Password);  
         $stmt -> execute(); 
         $stmt -> store_result();    
         $val = $stmt -> num_rows(); 
         if($val == 1){ 
-            $_SESSION['Usr'] = $Name;
-            $_SESSION['Time'] = time();
-            header("Location: home.php");
+            include('Login/Info.php');
         }else{
             $ErrorLogin = '
                 <div class="d-flex justify-content-center">
