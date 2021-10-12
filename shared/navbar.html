@@ -34,31 +34,38 @@
                                     <img src="assets/img/Logo.png" alt="Imagen del logo" class="w-100">
                                 </div>
                             </a>
-                            <div class="dropdown">
-                                <a class="dropdown-toggle block m-t-xs font-bold text-center" data-bs-toggle="dropdown" href="">
-                                    <?php
-                                        echo $_SESSION['Usr'];
-                                    ?>
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <div class="sidebar-collapse">
+                                <ul class="nav metismenu bg-transparent">
+                                    <li class="">
+                                        <a class="text-decoration-none" href="#"> <!-- block m-t-xs font-bold text-center -->
+                                            <span class="nav-label">
+                                                <?php
+                                                    echo $_SESSION['Usr'];
+                                                ?>
+                                            </span>
+                                            <b class="fa arrow"></b>
+                                        </a>
+                                        <ul class="nav nav-second-level collapse"> <!-- animated fadeInRight m-t-xs -->
+                                            <li><a class="text-decoration-none" href="#">Action</a></li>
+                                            <li><a class="text-decoration-none" href="#">Another action</a></li>
+                                            <hr>
+                                            <li><a class="text-decoration-none" href="#">Cerrar Sesion</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="logo-element">
-                            IN+
+                            <a class="text-decoration-none" href="home.php">IN+</a>
                         </div>
                     </li>
                     <li class='<?php if($Active == 1){echo "active";} ?>'>
                         <a href="page-1.php" class="text-decoration-none"> <i class="fas fa-book-open"></i> <span class="nav-label">Pagina 1</span> </a>
-                        <!-- <ul class="nav nav-second-level">
+                        <ul class="nav nav-second-level collapse">
                             <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
                             <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
                             <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
-                        </ul> -->
+                        </ul>
                     </li>
                     <li class='<?php if($Active == 2){echo "active";} ?>'>
                         <a href="page-2.php" class="text-decoration-none ">
