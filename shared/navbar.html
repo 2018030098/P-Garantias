@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/MyStyles.css">
 </head>
 <body>
     <div id="wrapper">
@@ -46,10 +47,10 @@
                                             <b class="fa arrow"></b>
                                         </a>
                                         <ul class="nav nav-second-level collapse"> <!-- animated fadeInRight m-t-xs -->
-                                            <li><a class="text-decoration-none" href="#">Action</a></li>
-                                            <li><a class="text-decoration-none" href="#">Another action</a></li>
+                                            <li><a class="text-decoration-none" href="home.php"> <b class="fas fa-chalkboard"></b> <span> Inicio </span> </a></li>
+                                            <li><a class="text-decoration-none" href="profile.php"> <b class="fas fa-address-card"></b> <span>Mi Perfil</span> </a></li>
                                             <hr>
-                                            <li><a class="text-decoration-none" href="#">Cerrar Sesion</a></li>
+                                            <li><a class="text-decoration-none" href="Login/log_out.php"> <b class="fa fa-sign-out"></b> <span>Cerrar Sesion</span> </a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -62,9 +63,9 @@
                     <li class='<?php if($Active == 1){echo "active";} ?>'>
                         <a href="page-1.php" class="text-decoration-none"> <i class="fas fa-book-open"></i> <span class="nav-label">Pagina 1</span> </a>
                         <ul class="nav nav-second-level collapse">
-                            <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
-                            <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
-                            <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
+                            <li class="text-decoration-none"><a href="page-1.php"><b class="fa fa-book"></b> Pagina 1 </a></li>
+                            <li class="text-decoration-none"><a href="page-1.php"><b class="fa fa-book"></b> Pagina 1 </a></li>
+                            <li class="text-decoration-none"><a href="page-1.php"><b class="fa fa-book"></b> Pagina 1 </a></li>
                         </ul>
                     </li>
                     <li class='<?php if($Active == 2){echo "active";} ?>'>
@@ -127,7 +128,7 @@
 
     <!-- Mainly scripts -->
     <script src="assets/javaScripts/jquery-3.1.1.min.js"></script>
-    <script src="assets/javaScripts/popper.min.js"></script>
+    <script src="assets/javaScripts/popper2.min.js"></script>
     <script src="assets/javaScripts/Bootstrap/bootstrap.min.js"></script>
     <script src="assets/javaScripts/metisMenu/jquery.metisMenu.js"></script>
     <script src="assets/javaScripts/slimscroll/jquery.slimscroll.min.js"></script>

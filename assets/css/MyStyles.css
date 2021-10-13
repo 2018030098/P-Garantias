@@ -1,4 +1,4 @@
-*::before::after {
+/* *::before::after {
   box-sizing: border-box; }
 
 .MrgSty {
@@ -14,4 +14,9 @@
 
 .color-out{
   background: #80ac53;
+} */
+
+.imgBG{
+  background: rgb(2,0,36); 
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(142,142,166,0.7931547619047619) 27%, rgba(138,144,169,1) 42%, rgba(107,197,215,1) 67%);
 }
