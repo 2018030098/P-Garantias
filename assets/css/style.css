@@ -997,8 +997,8 @@ h5 {
 }
 .nav-header {
   padding: 33px 25px;
-  background-color: hsl(209, 26%, 65%);
-  /* background-image: url("assets/img/patterns/header-profile.png"); */
+  background-color: hsl(209, 26%, 20%);
+  background-image: url("../img/patterns/header-profile.png");
 }
 .caret {
   display: inline-block;
