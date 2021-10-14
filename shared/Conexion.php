@@ -20,5 +20,7 @@
     $Sel_NewAcount = "SELECT * from usuarios WHERE Username = ?";
     $Ins_NewAcount = "INSERT INTO `usuarios`(`Username`, `Password`) VALUES (?,?)";
 
+    $Sel_Tickets = "SELECT * from tickets";
+
 /*----------*/
 ?>

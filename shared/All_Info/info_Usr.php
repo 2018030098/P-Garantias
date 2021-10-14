@@ -11,16 +11,9 @@ try {
                 $_SESSION['gender'] = $gender;
                 $_SESSION['img'] = $img;
         }
-        // por seguridad se les quita el valor a estos campos, ademas de que no son necesarios
-        unset($_SESSION['id']);
-        unset($_SESSION['psw']);
-        $_SESSION['Time'] = time();
 } 
 catch (\Throwable $th) {
         echo "Problema al tomar los valores de la base de datos";
         throw $th;
 }
-finally{
-        header("Location: home.php");
-} 
 ?>

@@ -13,36 +13,49 @@
 </head>
 <body>
 <!--  -->
-  <div id="wrapper">
+<div id="wrapper">
     <nav class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header w-100">
-                    <div class="profile-element dropdown">
+                    <div class="profile-element">
                         <a  class="text-decoration-none" href="home.php"> 
                             <div class="p-1 bg-light rounded">
                                 <img src="assets/img/Logo.png" alt="Imagen del logo" class="w-100">
                             </div>
-                        <!-- no funciona el dropdown -->
-                            <span class="block m-t-xs font-bold text-center">
-                                <?php
-                                    echo $_SESSION['Usr'];
-                                ?>
-                            </span>
-                            <!-- <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> -->
                         </a>
+                        <div class="sidebar-collapse">
+                            <ul class="nav metismenu bg-transparent">
+                                <li class="">
+                                    <a class="text-decoration-none" href="#"> <!-- block m-t-xs font-bold text-center -->
+                                        <span class="nav-label">
+                                            <?php
+                                                echo $_SESSION['Usr'];
+                                            ?>
+                                        </span>
+                                        <b class="fa arrow"></b>
+                                    </a>
+                                    <ul class="nav nav-second-level collapse"> <!-- animated fadeInRight m-t-xs -->
+                                        <li><a class="text-decoration-none" href="home.php"> <b class="fas fa-chalkboard"></b> <span> Inicio </span> </a></li>
+                                        <li><a class="text-decoration-none" href="profile.php"> <b class="fas fa-address-card"></b> <span>Mi Perfil</span> </a></li>
+                                        <hr>
+                                        <li><a class="text-decoration-none" href="Login/log_out.php"> <b class="fa fa-sign-out"></b> <span>Cerrar Sesion</span> </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="logo-element">
-                        IN+
+                        <a class="text-decoration-none" href="home.php">IN+</a>
                     </div>
                 </li>
                 <li class='<?php if($Active == 1){echo "active";} ?>'>
                     <a href="page-1.php" class="text-decoration-none"> <i class="fas fa-book-open"></i> <span class="nav-label">Pagina 1</span> </a>
-                    <!-- <ul class="nav nav-second-level">
-                        <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
-                        <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
-                        <li class="fa fa-book text-decoration-none"><a href="page-1.php"> Pagina 1 </a></li>
-                    </ul> -->
+                    <ul class="nav nav-second-level collapse">
+                        <li class="text-decoration-none"><a href="page-1.php"><b class="fa fa-book"></b> Pagina 1 </a></li>
+                        <li class="text-decoration-none"><a href="page-1.php"><b class="fa fa-book"></b> Pagina 1 </a></li>
+                        <li class="text-decoration-none"><a href="page-1.php"><b class="fa fa-book"></b> Pagina 1 </a></li>
+                    </ul>
                 </li>
                 <li class='<?php if($Active == 2){echo "active";} ?>'>
                     <a href="page-2.php" class="text-decoration-none ">
@@ -62,6 +75,12 @@
                         <span> Pagina 4</span>
                     </a>
                 </li>
+                <li class="<?php if($Active == ''){echo 'active';} ?>">
+                    <a href="Pruebas.html" class="text-decoration-none ">
+                        <i class="fas fa-cogs"></i>
+                        <span> # Pruebas #</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -73,7 +92,11 @@
                 </div>
         <ul class="nav navbar-top-links navbar-right">
             <li style="padding: 20px">
-                <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
+                <span class="m-r-sm text-muted welcome-message">
+                    <?php
+                        echo "Bienvenido ".$_SESSION['Name'];
+                    ?>
+                </span>
             </li>
             <li>
                 <a href="Login/log_out.php" class="text-decoration-none">
@@ -115,6 +138,7 @@
                             </div>
                         </div>
                     </div> 
+
                     <div class="social-body text-black">
                         <p>
                             Many desktop publishing packages and web page editors now use Lorem Ipsum as their
@@ -130,9 +154,10 @@
                         </p>
                         <img src="assets/img/delete/11.jpg" class="img-fluid">
                     </div>
-    
-                    <div class="social-footer text-black text-decoration-none">
-    
+
+                    <button id="btnShowComments" onclick="mostrar()" class="d-block btn btn-white">Comentarios <span class="text-muted">3</span></button>
+
+                    <div id="Comments" class="Comments social-footer text-black mb-2 rounded" style="background-color: hsl(0, 0%, 92%);">
                         <div class="social-comment bg-light shadow-sm rounded row mx-1 my-3">
                             <div class="row p-2">
                                 <div class="col-1">
@@ -206,139 +231,37 @@
                                 <textarea class="form-control shadow" placeholder="Write comment..."></textarea>
                             </div>
                         </div>
-    
                     </div>
-    
-                </div>
-            </div>
-
-            <!-- ############## -->     <!-- ############## -->     <!-- ############## -->     <!-- ############## -->
-<!-- ############## -->     <!-- ############## -->     <!-- ############## -->     <!-- ############## -->
-
-            <div class="row">
-                <div class="social-feed-box shadow rounded">
-
-                    <div class="social-avatar">
-                        <div class="media-body text-black row">
-                            <div class="col-1">
-                                <a href="" class="float-left">
-                                    <img alt="image" class="" src="assets/img/delete/a6.jpg">
-                                </a>
-                            </div>
-                            <div class="col-auto">
-                                <a href="#" class="row">
-                                    Andrew Williams
-                                </a>
-                                <small class="text-muted row">Today 4:21 pm - 12.06.2014</small>
-                            </div>
-                            <div class="col-lg-6 h5 m-2">
-                                ################################### <!-- 35 letras -->
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="social-body text-black">
-                        <p>
-                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                            default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                            in their infancy. Packages and web page editors now use Lorem Ipsum as their
-                            default model text.
-                        </p>
-                        <p>
-                            Lorem Ipsum as their
-                            default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                            in their infancy. Packages and web page editors now use Lorem Ipsum as their
-                            default model text.
-                        </p>
-                        <img src="assets/img/delete/11.jpg" class="img-fluid">
-                    </div>
-
-                    <div class="social-footer text-black text-decoration-none">
-
-                        <div class="social-comment bg-light shadow-sm rounded row mx-1 my-3">
-                            <div class="row p-2">
-                                <div class="col-1">
-                                    <a href="" class="float-left">
-                                        <img alt="image" src="assets/img/delete/a1.jpg">
-                                    </a>
-                                </div>
-                                <div class="media-body col-auto">
-                                    <a href="#" class="row">
-                                        Andrew Williams
-                                    </a>
-                                    <small class="text-muted row">12.06.2014</small>
-                                </div>
-                                <div class="mt-2">
-                                    <p>
-                                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="social-comment bg-light shadow-sm rounded row mx-1 my-3">
-                            <div class="row p-2">
-                                <div class="col-1">
-                                    <a href="" class="float-left">
-                                        <img alt="image" src="assets/img/delete/a2.jpg">
-                                    </a>
-                                </div>
-                                <div class="media-body col-auto">
-                                    <a href="#" class="row">
-                                        Andrew Williams
-                                    </a>
-                                    <small class="text-muted row">12.06.2014</small>
-                                </div>
-                                <div class="mt-2">
-                                    <p>
-                                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="social-comment bg-light shadow-sm rounded row mx-1 my-3">
-                            <div class="row p-2">
-                                <div class="col-1">
-                                    <a href="" class="float-left">
-                                        <img alt="image" src="assets/img/delete/a8.jpg">
-                                    </a>
-                                </div>
-                                <div class="media-body col-auto">
-                                    <a href="#" class="row">
-                                        Andrew Williams
-                                    </a>
-                                    <small class="text-muted row">12.06.2014</small>
-                                </div>
-                                <div class="mt-2">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil adipisci, iste repellendus aliquam quod provident rem, quibusdam quisquam modi placeat optio assumenda cupiditate architecto blanditiis, accusantium quis inventore! Explicabo, voluptate! Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="social-comment row bg-light shadow-sm p-1 rounded">
-                            <div class="col-1">
-                                <a href="" class="float-left">
-                                    <img alt="image" src="assets/img/delete/a3.jpg">
-                                </a>
-                            </div>
-                            <div class="media-body col">
-                                <textarea class="form-control shadow" placeholder="Write comment..."></textarea>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
             </div>
         </div>
-
-<!-- ############## -->     <!-- ############## -->     <!-- ############## -->     <!-- ############## -->
-<!-- ############## -->     <!-- ############## -->     <!-- ############## -->     <!-- ############## -->
-
-        <div class="col-3 bg-danger">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, corporis magnam sit ad asperiores velit qui dolor perferendis sed adipisci, voluptatum illum minus iste. In amet possimus natus libero corrupti.</p>
+        <div class="col-3">
+            <div class="bg-white rounded-pill text-center shadow-sm">
+                <h2>Post</h2>
+            </div>
+            <div class="row text-black">
+                <div class="card row p-2 social-avatar shadow rounded mx-2 my-3">
+                    <div class="row h5 m-1 mb-2">
+                        <div class="col text-center">
+                            ################################### <!-- 35 letras -->
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-3">
+                            <a href="" class="float-left">
+                                <img alt="image" class="rounded-circle" src="assets/img/delete/a6.jpg">
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="#" class="row">
+                                Andrew Williams
+                            </a>
+                            <small class="text-muted row">Today 4:21 pm - 12.06.2014</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -357,5 +280,22 @@
     <!-- Customs and plugin-->
     <script src="assets/javaScripts/inspinia.js"></script>
     <script src="assets/javaScripts/pace/pace.min.js"></script>
+
+    <script>
+        const btnComments = document.getElementById('btnShowComments')
+        const Comments = document.getElementById('Comments')
+        
+        // function mostrar(){
+        //     if(Comments.classList.contains(')){
+        //         Comments.classList.remove(')
+        //     }
+        //     else{
+        //         Comments.classList.add(')
+        //     }
+        // }
+        
+        btnComments.addEventListener('click', mostrar)
+
+    </script>
 </body>
 </html>

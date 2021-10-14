@@ -20,7 +20,12 @@ if (isset($_POST['LoginUsername']) && isset($_POST['LoginPassword'])) {
         $stmt -> store_result();    
         $val = $stmt -> num_rows(); 
         if($val == 1){ 
-            include('Login/Info.php');
+            include('shared/All_Info/info_Usr.php');
+            // por seguridad se les quita el valor a estos campos, ademas de que no son necesarios
+            unset($_SESSION['id']);
+            unset($_SESSION['psw']);
+            $_SESSION['Time'] = time();
+            header("Location: home.php");
         }else{
             $ErrorLogin = '
                 <div class="d-flex justify-content-center">
@@ -36,4 +41,5 @@ if (isset($_POST['LoginUsername']) && isset($_POST['LoginPassword'])) {
         throw $th;
     }
 }
+$connection -> close();
 ?>
