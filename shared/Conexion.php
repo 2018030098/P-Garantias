@@ -22,5 +22,10 @@
 
     $Sel_Tickets = "SELECT * from tickets";
 
+    $Sel_UsrById = "SELECT * from usuarios WHERE Id = ?";
+    $Sel_TckById = "SELECT * from tickets WHERE Id = ?";
+
+    $Sel_Comments = "SELECT * from comentarios_tickets WHERE tickets_Id = ?";
+
 /*----------*/
 ?>
