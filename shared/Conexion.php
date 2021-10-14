@@ -26,6 +26,7 @@
     $Sel_TckById = "SELECT * from tickets WHERE Id = ?";
 
     $Sel_Comments = "SELECT * from comentarios_tickets WHERE tickets_Id = ?";
+    $Ins_NewComment = "INSERT INTO `comentarios_tickets`(`Comentario`, `Fecha-y-Hora`, `tickets_Id`, `usuarios_Id`) VALUES (?,?,?,?)";
 
 /*----------*/
 ?>

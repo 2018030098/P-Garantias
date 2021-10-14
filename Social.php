@@ -2,18 +2,36 @@
     session_start();
     include('shared/Conexion.php');
     $Active = 1;
+// no esta entrando
+    if(isset($_POST['txt_A_Comentario'])){
+        $txtArea = $_POST['txt_A_Comentario'];
+        $ticket_id = $_SESSION['tmp'];
+        $fecha = new DateTime();
+        
+        try {
+            $InsCmt = $connection -> prepare($Ins_NewComment); 
+            $InsCmt -> bind_param('ssii',$txtArea,$fecha,$ticket_id,$_SESSION['id']);
+            $InsCmt -> execute();
+        } catch (\Throwable $th) {
+            echo "Error al insertar el comentario";
+            throw $th;
+        } 
+        $InsCmt ->close();
+        unset($_SESSION['tmp']);
+    }
 
+// 
     $stmt = $connection -> prepare($Sel_Tickets); 
     $stmt -> execute(); 
     $stmt -> store_result(); 
     $stmt -> bind_result($id, $ttl, $dsc, $date, $status, $usr_id);
-    $BodyHtml = "";
-    include('shared/navbar.html'); 
+    $BodyHtml = '';
+    include('shared/navbar/navbar.html'); 
 ?>
 <html>
     <div class='container'>
         <div class='row'>
-            <div class='mx-4 me-5'>
+            <div class=''> <!-- col-8 mx-4 me-5 -->
                     <?php
                         while ($stmt->fetch()) {
                             $stmtUsr = $connection -> prepare($Sel_UsrById);
@@ -40,7 +58,7 @@
                                                         </a>
                                                     </div>
                                                     <div class='col-auto'>
-                                                        <a href='#' class='row'>
+                                                        <a href='#' class='row text-decoration-none'>
                                                             $usr
                                                         </a>
                                                         <small class='text-muted row'>$date</small>
@@ -73,13 +91,17 @@
                                     <div id='Comments' class='Comments social-footer text-black mb-2 rounded' style='background-color: hsl(0, 0%, 92%);'>
                                         
                                         <div class='social-comment row bg-light shadow-sm p-1 rounded'>
-                                            <div class='col-1'>
+                                            <div class='col-auto'>
                                                 <a href='' class='float-left'>
                                                     <img alt='image' src='assets/img/delete/a3.jpg'>
                                                 </a>
                                             </div>
                                             <div class='media-body col'>
-                                                <textarea class='form-control shadow' placeholder='Write comment...'></textarea>
+                                                <form action='Social.php' method='POST'>
+                                                    <textarea id='txt_A_Comentario' class='form-control shadow-sm' placeholder='Write comment...'></textarea>
+                                                    <button type='submit' class='btn btn-sm btn-primary m-1 ms-3'>Comentar</button>";
+                                                    $_SESSION['tmp'] = $id;
+                                              echo "</form>
                                             </div>
                                         </div>
                                 ";
@@ -108,7 +130,7 @@
                                                     </a>
                                                 </div>
                                                 <div class='media-body col-auto'>
-                                                    <a href='#' class='row'>
+                                                    <a href='#' class='row text-decoration-none'>
                                                         $usr2
                                                     </a>
                                                     <small class='text-muted row'>$dte</small>
@@ -132,7 +154,52 @@
                     ?>
                 
             </div>
+            <!-- 
+            <div class="col-3">
+                <div class="bg-white rounded-pill text-center shadow-sm">
+                    <a href="" class="text-decoration-none text-black">
+                        <h2>Nuevo Post</h2>
+                    </a>
+                </div>
+                <?php
+                    while ($stmt->fetch()) {
+                        // if($status === 1){
+                            echo "
+                                <div class='row text-black'>
+                                    <div class='card row p-2 social-avatar shadow rounded mx-2 my-3'>
+                                        <div class='row h5 m-1 mb-2'>
+                                            <div class='col text-center'>
+                                                ################################### <!-- 35 letras -->
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class='row'>
+                                            <div class='col-3'>
+                                                <a href='' class='float-left'>
+                                                    <img alt='image' class='rounded-circle' src='assets/img/delete/a6.jpg'>
+                                                </a>
+                                            </div>
+                                            <div class='col-auto'>
+                                                <a href='#' class='row'>
+                                                    Andrew Williams
+                                                </a>
+                                                <small class='text-muted row'>Today 4:21 pm - 12.06.2014</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ";
+                        }
+                    // }
+                ?>
+            </div>
+              -->
         </div>
     </div>
 <!--   -->
 </html>
+<?php
+    include('shared/navbar/navbar-2.html');
+    echo $_SESSION['id'];
+    $stmt->close();
+?>

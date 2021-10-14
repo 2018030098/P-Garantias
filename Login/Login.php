@@ -22,7 +22,6 @@ if (isset($_POST['LoginUsername']) && isset($_POST['LoginPassword'])) {
         if($val == 1){ 
             include('shared/All_Info/info_Usr.php');
             // por seguridad se les quita el valor a estos campos, ademas de que no son necesarios
-            unset($_SESSION['id']);
             unset($_SESSION['psw']);
             $_SESSION['Time'] = time();
             header("Location: home.php");

@@ -93,54 +93,32 @@
                 </ul>
             </div>
         </nav>
-        <nav id="page-wrapper" class="gray-bg dashbard-1">
+        <div id="page-wrapper" class="gray-bg">
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top " role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header">
                         <a class="navbar-minimalize minimalize-styl-2 btn btn-primary me-4" href="#"><i class="fa fa-bars"></i> </a>
                     </div>
-            <ul class="nav navbar-top-links navbar-right">
-                <li style="padding: 20px">
-                    <span class="m-r-sm text-muted welcome-message">
-                        <?php
-                            echo "Bienvenido ".$_SESSION['Name'];
-                        ?>
-                    </span>
-                </li>
-                <li>
-                    <a href="Login/log_out.php" class="text-decoration-none">
-                        <i class="fa fa-sign-out"></i> Cerrar Sesion
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <hr>
-        <div>
-            <?php
-                echo($BodyHtml);
-            ?>
-        </div>
-    </div>
-
-<!--  -->         <!--  -->         <!--  -->         <!--  -->         <!--  -->         <!--  -->
-
-    <!-- Mainly scripts -->
-    <script src="assets/javaScripts/jquery-3.1.1.min.js"></script>
-    <script src="assets/javaScripts/popper2.min.js"></script>
-    <script src="assets/javaScripts/Bootstrap/bootstrap.min.js"></script>
-    <script src="assets/javaScripts/metisMenu/jquery.metisMenu.js"></script>
-    <script src="assets/javaScripts/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="https://kit.fontawesome.com/6aa6c40f89.js" crossorigin="anonymous"></script>
-    
-    <!-- Customs and plugin-->
-    <script src="assets/javaScripts/inspinia.js"></script>
-    <script src="assets/javaScripts/pace/pace.min.js"></script>
-
-    <!-- jQuery UI -->
-    <script src="assets/javaScripts/jquery-ui/jquery-ui.min.js"></script>
-    
-    <!-- toastr (notificaciones) -->
-    <script src="assets/javaScripts/toastr/toastr.min.js"></script>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li style="padding: 20px">
+                            <span class="m-r-sm text-muted welcome-message">
+                                <?php
+                                    echo "Bienvenido ".$_SESSION['Name'];
+                                ?>
+                            </span>
+                        </li>
+                        <li>
+                            <a href="Login/log_out.php" class="text-decoration-none">
+                                <i class="fa fa-sign-out"></i> Cerrar Sesion
+                            </a>
+                        </li>
+                    </ul>
+                </nav>  
+            </div>
+            <div class="wrapper wrapper-content">
+                <?php
+                    echo($BodyHtml);
+                ?>
 
 </body>
 </html>

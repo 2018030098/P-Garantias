@@ -380,7 +380,8 @@
                     </div>
     <!--  -->
     ";
-    include('shared/navbar.html'); 
+    include('shared/navbar/navbar.html');
+    include('shared/navbar/navbar-2.html');
 
 ?>
 
