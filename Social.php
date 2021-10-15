@@ -27,9 +27,11 @@
     $stmt -> bind_result($id, $ttl, $dsc, $date, $status, $usr_id);
     $BodyHtml = '';
     include('shared/navbar/navbar.html'); 
+
+    // para los comentarios talvez se pueda hacer como con los submenus
 ?>
 <html>
-    <div class='container'>
+    <div class='container animated fadeInRight'>
         <div class='row'>
             <div class=''> <!-- col-8 mx-4 me-5 -->
                     <?php
@@ -86,7 +88,7 @@
                                 $num_Cmt = $stmt_Comments -> num_rows();
 
                                 echo "
-                                    <button id='btnShowComments' onclick='mostrar()' class='d-block btn btn-white'>Comentarios <span class='text-muted'> $num_Cmt </span></button>
+                                <button id='btnShowComments' onclick='mostrar()' class='d-block btn btn-white'>Comentarios <span class='text-muted'> $num_Cmt </span></button>
                                     
                                     <div id='Comments' class='Comments social-footer text-black mb-2 rounded' style='background-color: hsl(0, 0%, 92%);'>
                                         
