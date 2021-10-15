@@ -14,44 +14,76 @@
         $img = "assets/img/user_icon-icons.com_57997.svg";
     }
 
+// 
+    $_SESSION['job'] = "Estudiante";
+    $_SESSION['dsc'] = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores labore recusandae obcaecati dicta debitis dolor id atque fuga, officiis ad quae architecto? Necessitatibus illo, dolores sequi animi omnis tenetur voluptatum!";
+    $_SESSION['emp'] = "Cistem";
+// 
+
     $Active = 0;
-    $BodyHtml = "
-        <div class='card mb-3 imgBG'>
-            <div class='row g-0'>
-                <div class='col-md-4 d-flex justify-content-center align-items-center'>
-                    <img src='$img' class='img-fluid rounded-start h-75' alt='...'>
-                </div>
-            <div class='col-md-8'>
-                <div class='card-body h-100 d-flex align-items-center'>
-                    <div class='card shadow-sm p-2 flex-fill'>
-                        <form>
-                            <fieldset disabled>
-                                <div class='mb-3'>
-                                    <label class='form-label'>Username</label>
-                                    <input value='$usr' class='form-control'>
+    $BodyHtml = '';
+    include('shared/navbar/navbar.html');
+?>
+    <html>
+    <div class="card  bg-transparent border-0">
+                    <div class="card-body">
+                        <div class="row d-flex my-2 shadow rounded">
+                            <div class="col-3 justify-content-center bg-white">
+                                <div class="row "> <!-- w-75 -->
+                                    <img src="assets/img/user_icon-icons.com_57997.svg" class="rounded-circle circle-border m-b-md" alt="">
                                 </div>
-                                <div class='mb-3'>
-                                    <label class='form-label'>Nombre</label>
-                                    <input value='$name' class='form-control'>
+                                <div class="row "> <!-- w-75 -->
+                                    <h2 class="text-center">
+                                        <?php   echo $_SESSION['Usr'];   ?>
+                                    </h2>
                                 </div>
-                                <div class='mb-3'>
-                                    <label class='form-label'>Correo electronico</label>
-                                    <input value='$email' class='form-control'>
+                            </div>
+
+                            <div class="col-6 align-items-center bg-white">
+                                <div class="row mt-5">
+                                    <p class="display-6">
+                                        <?php   echo $_SESSION['Name'];   ?>
+                                    </p>
                                 </div>
-                                <div class='mb-3'>
-                                    <label class='form-label'>Genero</label>
-                                    <input value='$gender'
-                                    class='form-control'>
+                                <div class="row">
+                                    <h3>
+                                        <?php   echo $_SESSION['job'];   ?>
+                                    </h3>
                                 </div>
-                            </fieldset>
-                        </form>
+                                <div class="row my-4">
+                                    <p>
+                                        <?php   echo $_SESSION['dsc'];   ?>
+                                    </p>
+                                </div>
+                                <div class="row d-flex">
+                                    <div class="justify-content-end">
+                                        <p class="text-end lead">
+                                            <?php   echo $_SESSION['emp'];   ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 bg-white">
+                                <div class="row-6 h6 mt-3">
+                                    <div class="col-auto ms-auto">
+                                        <p>
+                                            <?php   echo $_SESSION['email'];   ?>
+                                            <b class="fas fa-at"></b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row-1 mt-auto ms-auto" title="Modificar">
+                                    <a href="Mod_profile.php" class="bg-primary rounded-pill d-inline p-2">
+                                        <i class="fas fa-cogs"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </div>
-        </div>
-        ";
-    include('shared/navbar/navbar.html');
+    </html>
+<?php
     include('shared/navbar/navbar-2.html');
 ?>
 
