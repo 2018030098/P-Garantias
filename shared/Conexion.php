@@ -28,5 +28,8 @@
     $Sel_Comments = "SELECT * from comentarios_tickets WHERE tickets_Id = ?";
     $Ins_NewComment = "INSERT INTO `comentarios_tickets`(`Comentario`, `Fecha-y-Hora`, `tickets_Id`, `usuarios_Id`) VALUES (?,?,?,?)";
 
+    $Upd_Usr = "UPDATE usuarios SET Email = ?, Nombre = ?, Puesto = ?, Descripcion = ?, Empresa = ?, Imagen = ? WHERE id = ?";
+    //          UPDATE `usuarios` SET `Email`='[value-4]',  `Nombre`='[value-5]',   `Puesto`='[value-6]',   `Descripcion`='[value-7]',  `Empresa`='[value-8]',  `Gender`='[value-9]',   `Imagen`='[value-10]'   WHERE 1
+
 /*----------*/
 ?>

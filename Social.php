@@ -40,7 +40,7 @@
                             $stmtUsr -> bind_param('i', $usr_id);  
                             $stmtUsr -> execute(); 
                             $stmtUsr -> store_result();
-                            $stmtUsr -> bind_result($id1, $usr, $psw, $email, $name, $gender, $img);
+                            $stmtUsr -> bind_result($id1, $usr, $psw, $email, $name, $job, $dsc, $emp, $gender, $img);
                             while ($stmtUsr -> fetch()){
                                 $id1 = $id1;
                                 $usr = $usr;
@@ -114,7 +114,7 @@
                                     $stmtUsr -> bind_param('i', $usr2_id);  
                                     $stmtUsr -> execute(); 
                                     $stmtUsr -> store_result();
-                                    $stmtUsr -> bind_result($id, $usr2, $psw, $email, $name2, $gender, $img);
+                                    $stmtUsr -> bind_result($id, $usr2, $psw, $email, $name2, $job2, $dsc2, $emp2, $gender, $img);
                                     while ($stmtUsr -> fetch()){
                                         $id = $id;
                                         $usr2 = $usr2;
