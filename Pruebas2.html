@@ -27,7 +27,7 @@
     <div id="wrapper"> 
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
-                <ul class="nav metismenu" > <!-- id="side-menu" -->
+                <ul class="nav metismenu" id="side-menu"> <!--  -->
                     <li class="nav-header w-100">
                         <div class="profile-element">
                             <a  class="text-decoration-none" href="home.php"> 
@@ -131,9 +131,9 @@
             <!--  -->
 <hr>
 <!-- Esto no funcionara para mostrar/ocultar los comentarios, ya que utiliza un id para ello -->
-            <nav class="navbar-default navbar-static-side" role="navigation">
+            <!-- <nav class="navbar-default navbar-static-side" role="navigation">
                   <div class="sidebar-collapse">
-                        <ul class="nav metismenu" id="side-menu">
+                        <ul class="nav metismenu" id="body-menu">
                               <li>
                                     <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level collapse">
@@ -146,87 +146,288 @@
                               </li>
                         </ul>
                   </div>
-            </nav>
+            </nav> -->
 <hr>
-            <button id='btnShowComments' onclick='mostrar()' class='d-block btn btn-white'>Comentarios <span class='text-muted'> 3 </span></button>
 
-            <div id='Comments' class='Comments social-footer text-black mb-2 rounded' style='background-color: hsl(0, 0%, 92%);'>
-                                        
-                  <div class='social-comment row bg-light shadow-sm p-1 rounded'>
-                      <div class='col-auto'>
-                          <a href='' class='float-left'>
-                              <img alt='image' src='assets/img/delete/a3.jpg'>
-                          </a>
-                      </div>
-                      <div class='media-body col'>
-                              <form action='Social.php' method='POST'>
-                                    <textarea id='txt_A_Comentario' class='form-control shadow-sm' placeholder='Write comment...'></textarea>
-                                    <button type='submit' class='btn btn-sm btn-primary m-1 ms-3'>Comentar</button>
-                              </form>
-                      </div>
-                  </div>
-
-
-                  <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
-                        <div class='row p-2'>
-                            <div class='col-auto'>
-                                <a href='' class='float-left'>
-                                    <img alt='image' src='assets/img/delete/a1.jpg'>
-                                </a>
-                            </div>
-                            <div class='media-body col-auto'>
-                                <a href='#' class='row text-decoration-none'>
-                                    Adrian      
-                                </a>
-                                <small class='text-muted row'>15/10/21</small>
-                            </div>
-                            <div class='mt-2'>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
-                        <div class='row p-2'>
-                            <div class='col-auto'>
-                                <a href='' class='float-left'>
-                                    <img alt='image' src='assets/img/delete/a5.jpg'>
-                                </a>
-                            </div>
-                            <div class='media-body col-auto'>
-                                <a href='#' class='row text-decoration-none'>
-                                    Adrian      
-                                </a>
-                                <small class='text-muted row'>15/10/21</small>
-                            </div>
-                            <div class='mt-2'>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
-                        <div class='row p-2'>
-                            <div class='col-auto'>
-                                <a href='' class='float-left'>
-                                    <img alt='image' src='assets/img/delete/a7.jpg'>
-                                </a>
-                            </div>
-                            <div class='media-body col-auto'>
-                                <a href='#' class='row text-decoration-none'>
-                                    Adrian      
-                                </a>
-                                <small class='text-muted row'>15/10/21</small>
-                            </div>
-                            <div class='mt-2'>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav metismenu" id="body-menu">
+                        <li>
+                            <a href="#" class='d-block btn btn-white'>Comentarios <span class='text-muted'> 3 </span></a>
+                            <ul class="nav nav-second-level  Comments social-footer text-black mb-2 rounded  collapse" style="width:75vw">
+                                <li>
+                                    <div class='social-comment row bg-light shadow-sm p-1 rounded'>
+                                        <div class='col-auto'>
+                                            <a href='' class='float-left'>
+                                                <img alt='image' src='assets/img/delete/a3.jpg'>
+                                            </a>
+                                        </div>
+                                        <div class='media-body col'>
+                                                <form action='Social.php' method='POST'>
+                                                    <textarea id='txt_A_Comentario' class='form-control shadow-sm' placeholder='Write comment...'></textarea>
+                                                    <button type='submit' class='btn btn-sm btn-primary m-1 ms-3'>Comentar</button>
+                                                </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
+                                        <div class='row p-2'>
+                                            <div class='col-auto'>
+                                                <a href='' class='float-left'>
+                                                    <img alt='image' src='assets/img/delete/a1.jpg'>
+                                                </a>
+                                            </div>
+                                            <div class='media-body col-auto'>
+                                                <a href='#' class='row text-decoration-none'>
+                                                    Adrian      
+                                                </a>
+                                                <small class='text-muted row'>15/10/21</small>
+                                            </div>
+                                            <div class='mt-2'>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
+                                        <div class='row p-2'>
+                                            <div class='col-auto'>
+                                                <a href='' class='float-left'>
+                                                    <img alt='image' src='assets/img/delete/a5.jpg'>
+                                                </a>
+                                            </div>
+                                            <div class='media-body col-auto'>
+                                                <a href='#' class='row text-decoration-none'>
+                                                    Adrian      
+                                                </a>
+                                                <small class='text-muted row'>15/10/21</small>
+                                            </div>
+                                            <div class='mt-2'>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
+                                        <div class='row p-2'>
+                                            <div class='col-auto'>
+                                                <a href='' class='float-left'>
+                                                    <img alt='image' src='assets/img/delete/a7.jpg'>
+                                                </a>
+                                            </div>
+                                            <div class='media-body col-auto'>
+                                                <a href='#' class='row text-decoration-none'>
+                                                    Adrian      
+                                                </a>
+                                                <small class='text-muted row'>15/10/21</small>
+                                            </div>
+                                            <div class='mt-2'>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <hr>
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav metismenu" id="body-menu">
+                        <li>
+                            <a href="#" class='d-block btn btn-white'>Comentarios <span class='text-muted'> 3 </span></a>
+                            <ul class="nav nav-second-level  Comments social-footer text-black mb-2 rounded  collapse" style="width:75vw">
+                                <li>
+                                    <div class='social-comment row bg-light shadow-sm p-1 rounded'>
+                                        <div class='col-auto'>
+                                            <a href='' class='float-left'>
+                                                <img alt='image' src='assets/img/delete/a3.jpg'>
+                                            </a>
+                                        </div>
+                                        <div class='media-body col'>
+                                                <form action='Social.php' method='POST'>
+                                                    <textarea id='txt_A_Comentario' class='form-control shadow-sm' placeholder='Write comment...'></textarea>
+                                                    <button type='submit' class='btn btn-sm btn-primary m-1 ms-3'>Comentar</button>
+                                                </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
+                                        <div class='row p-2'>
+                                            <div class='col-auto'>
+                                                <a href='' class='float-left'>
+                                                    <img alt='image' src='assets/img/delete/a1.jpg'>
+                                                </a>
+                                            </div>
+                                            <div class='media-body col-auto'>
+                                                <a href='#' class='row text-decoration-none'>
+                                                    Adrian      
+                                                </a>
+                                                <small class='text-muted row'>15/10/21</small>
+                                            </div>
+                                            <div class='mt-2'>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
+                                        <div class='row p-2'>
+                                            <div class='col-auto'>
+                                                <a href='' class='float-left'>
+                                                    <img alt='image' src='assets/img/delete/a5.jpg'>
+                                                </a>
+                                            </div>
+                                            <div class='media-body col-auto'>
+                                                <a href='#' class='row text-decoration-none'>
+                                                    Adrian      
+                                                </a>
+                                                <small class='text-muted row'>15/10/21</small>
+                                            </div>
+                                            <div class='mt-2'>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
+                                        <div class='row p-2'>
+                                            <div class='col-auto'>
+                                                <a href='' class='float-left'>
+                                                    <img alt='image' src='assets/img/delete/a7.jpg'>
+                                                </a>
+                                            </div>
+                                            <div class='media-body col-auto'>
+                                                <a href='#' class='row text-decoration-none'>
+                                                    Adrian      
+                                                </a>
+                                                <small class='text-muted row'>15/10/21</small>
+                                            </div>
+                                            <div class='mt-2'>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <hr>
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav metismenu" id="body-menu">
+                        <li>
+                            <a href="#" class='d-block btn btn-white'>Comentarios <span class='text-muted'> 3 </span></a>
+                            <ul class="nav nav-second-level  Comments social-footer text-black mb-2 rounded  collapse" style="width:75vw">
+                                <li>
+                                    <div class='social-comment row bg-light shadow-sm p-1 rounded'>
+                                        <div class='col-auto'>
+                                            <a href='' class='float-left'>
+                                                <img alt='image' src='assets/img/delete/a3.jpg'>
+                                            </a>
+                                        </div>
+                                        <div class='media-body col'>
+                                                <form action='Social.php' method='POST'>
+                                                    <textarea id='txt_A_Comentario' class='form-control shadow-sm' placeholder='Write comment...'></textarea>
+                                                    <button type='submit' class='btn btn-sm btn-primary m-1 ms-3'>Comentar</button>
+                                                </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
+                                        <div class='row p-2'>
+                                            <div class='col-auto'>
+                                                <a href='' class='float-left'>
+                                                    <img alt='image' src='assets/img/delete/a1.jpg'>
+                                                </a>
+                                            </div>
+                                            <div class='media-body col-auto'>
+                                                <a href='#' class='row text-decoration-none'>
+                                                    Adrian      
+                                                </a>
+                                                <small class='text-muted row'>15/10/21</small>
+                                            </div>
+                                            <div class='mt-2'>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
+                                        <div class='row p-2'>
+                                            <div class='col-auto'>
+                                                <a href='' class='float-left'>
+                                                    <img alt='image' src='assets/img/delete/a5.jpg'>
+                                                </a>
+                                            </div>
+                                            <div class='media-body col-auto'>
+                                                <a href='#' class='row text-decoration-none'>
+                                                    Adrian      
+                                                </a>
+                                                <small class='text-muted row'>15/10/21</small>
+                                            </div>
+                                            <div class='mt-2'>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='social-comment bg-light shadow-sm rounded row mx-1 my-3'>
+                                        <div class='row p-2'>
+                                            <div class='col-auto'>
+                                                <a href='' class='float-left'>
+                                                    <img alt='image' src='assets/img/delete/a7.jpg'>
+                                                </a>
+                                            </div>
+                                            <div class='media-body col-auto'>
+                                                <a href='#' class='row text-decoration-none'>
+                                                    Adrian      
+                                                </a>
+                                                <small class='text-muted row'>15/10/21</small>
+                                            </div>
+                                            <div class='mt-2'>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus autem molestias qui nobis odio? Doloremque molestiae dolor cum officiis.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+                <!-- <div id='Comments' class='Comments social-footer text-black mb-2 rounded' style='background-color: hsl(0, 0%, 92%);'> -->     
             </div>
             <!--  -->
             </div>
