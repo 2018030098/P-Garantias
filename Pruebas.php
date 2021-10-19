@@ -139,28 +139,29 @@
                 </div>
 
                 -->
-                <!--  -->
-               
+<!--  -->
+
                 <?php
                     // session_start();
                     include("shared/Conexion.php");
 
                     if(isset($_REQUEST['guardar'])){
                         if(isset($_FILES['NewFoto']['name'])){
-                            $typeImg = $_FILES['NewFoto']['type'];
-                            $nameImg = $_FILES['NewFoto']['name'];
-                            $sizeImg = $_FILES['NewFoto']['size'];
+                            // $typeImg = $_FILES['NewFoto']['type'];
+                            // $nameImg = $_FILES['NewFoto']['name'];
+                            // $sizeImg = $_FILES['NewFoto']['size'];
                             // $upImg = fopen($_FILES['NewFoto']['tmp_name'],'r');
                             // $binImg = fread($upImg,$sizeImg);
                             // $binImg = mysqli_escape_string($connection,$binImg);
-                            $imagen = addslashes(file_get_contents($_FILES['NewFoto']['tmp_name']));
+
+                            $imagen = addslashes(file_get_contents($_POST['NewFoto']['tmp_name']));
+                            $Ins_Img = "INSERT INTO `imagen_prueba`(`Nombre`,`Imagen`,`tipo`) VALUES ('$nameImg','$imagen','$typeImg')";
+                            $res = mysqli_query($connection,$Ins_Img);
 
                             // echo "$binImg";
                             // echo "$imagen";
-echo "<hr>";
-                            $Ins_Img = "INSERT INTO `imagen_prueba`(`Nombre`,`Imagen`,`tipo`) VALUES ('$nameImg','$imagen','$typeImg')";
+                echo "<hr>";
 
-                            $res = mysqli_query($connection,$Ins_Img);
                             // $stmt = $connection -> prepare($Ins_Img); 
                             // $stmt -> bind_param("b", $imagen);
                             // $stmt -> execute();
@@ -176,7 +177,7 @@ echo "<hr>";
                         <button type="submit" name="guardar" class="btn btn-outline-success mt-3"> enviar </button>
                     </div>
                 </form>
-                <!--  -->
+<!--  -->
             </div>
         </div>
     </div>

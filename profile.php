@@ -10,8 +10,9 @@
     }else{
         $gender = 'Mujer';
     }
-    if ($_SESSION['img'] === NULL) {
-        $img = "assets/img/user_icon-icons.com_57997.svg";
+    if ($_SESSION['img'] !== NULL) {
+        $img = $_SESSION['img'];
+        $tpe = $_SESSION['tpe'];
     }
 
     $Active = 0;
@@ -24,7 +25,14 @@
                 <div class="row d-flex my-2 shadow rounded">
                     <div class="col-3 justify-content-center bg-white">
                         <div class="row "> <!-- w-75 -->
-                            <img src="assets/img/user_icon-icons.com_57997.svg" class="rounded-circle circle-border m-b-md" alt="">
+                            <img class="rounded-circle circle-border m-b-md" alt="" 
+                                <?php  if(isset($img) && isset($tpe)) { ?>  
+                                            src="data:<?php echo $tpe ?>;base64,<?php echo  base64_encode($img); ?>"  
+                                <?php   }else {     ?>
+                                            src="assets/img/user_icon-icons.com_57997.svg"
+                                <?php   }           ?>
+                            >
+                                 
                         </div>
                         <div class="row "> <!-- w-75 -->
                             <h2 class="text-center">

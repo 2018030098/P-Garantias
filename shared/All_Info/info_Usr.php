@@ -1,7 +1,7 @@
 <?php
 // Obtiene la informacion registrada en la base de datos del usuario que acaba de ingresar
 try {
-        $stmt -> bind_result($id, $usr, $psw, $email, $name, $job, $dsc, $emp, $gender, $img);
+        $stmt -> bind_result($id, $usr, $psw, $email, $name, $job, $dsc, $emp, $gender, $img, $tpe); 
         while ($stmt->fetch()) {
                 $_SESSION['id'] = $id;
                 $_SESSION['Usr'] = $usr;
@@ -13,6 +13,7 @@ try {
                 $_SESSION['emp'] = $emp;
                 $_SESSION['gender'] = $gender;
                 $_SESSION['img'] = $img;
+                $_SESSION['tpe'] = $tpe;
         }
 } 
 catch (\Throwable $th) {

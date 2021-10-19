@@ -40,13 +40,20 @@
                             $stmtUsr -> bind_param('i', $usr_id);  
                             $stmtUsr -> execute(); 
                             $stmtUsr -> store_result();
-                            $stmtUsr -> bind_result($id1, $usr, $psw, $email, $name, $job, $dsc, $emp, $gender, $img);
+                            $stmtUsr -> bind_result($id1, $usr, $psw, $email, $name, $job, $dsc, $emp, $gender, $img, $tpe);
                             while ($stmtUsr -> fetch()){
                                 $id1 = $id1;
                                 $usr = $usr;
                                 $name = $name;
                                 $gender = $gender;
                                 $img = $img;
+                                $tpe = $tpe;
+                                $Enc_Img = base64_encode($img);
+                                $url_img = "data:$tpe;base64, $Enc_Img";
+                                if ($url_img == "data:;base64, ") {
+                                    $url_img = "assets/img/user_icon-icons.com_57997.svg";
+                                  
+                                }
                             }
                             if($status === 1){
                                 echo "
@@ -56,7 +63,7 @@
                                                 <div class='media-body text-black row'>
                                                     <div class='col-auto'>
                                                         <a href='' class='float-left'>
-                                                            <img alt='image' class='' src='assets/img/delete/a6.jpg'>
+                                                            <img alt='image' class='' src='$url_img'>
                                                         </a>
                                                     </div>
                                                     <div class='col-auto'>
@@ -95,7 +102,7 @@
                                         <div class='social-comment row bg-light shadow-sm p-1 rounded'>
                                             <div class='col-auto'>
                                                 <a href='' class='float-left'>
-                                                    <img alt='image' src='assets/img/delete/a3.jpg'>
+                                                    <img alt='image' src='$url_img'>
                                                 </a>
                                             </div>
                                             <div class='media-body col'>
@@ -114,13 +121,20 @@
                                     $stmtUsr -> bind_param('i', $usr2_id);  
                                     $stmtUsr -> execute(); 
                                     $stmtUsr -> store_result();
-                                    $stmtUsr -> bind_result($id, $usr2, $psw, $email, $name2, $job2, $dsc2, $emp2, $gender, $img);
+                                    $stmtUsr -> bind_result($id, $usr2, $psw, $email, $name2, $job2, $dsc2, $emp2, $gender, $img, $tpe);
                                     while ($stmtUsr -> fetch()){
                                         $id = $id;
                                         $usr2 = $usr2;
                                         $name2 = $name2;
                                         $gender = $gender;
                                         $img = $img;
+                                        $tpe = $tpe;
+                                        $Enc_Img = base64_encode($img);
+                                        $url_img = "data:$tpe;base64, $Enc_Img";
+                                        if ($url_img == "data:;base64, ") {
+                                            $url_img = "assets/img/user_icon-icons.com_57997.svg";
+                                        
+                                        }
                                     }
 
                                     echo "
@@ -128,7 +142,7 @@
                                             <div class='row p-2'>
                                                 <div class='col-auto'>
                                                     <a href='' class='float-left'>
-                                                        <img alt='image' src='assets/img/delete/a1.jpg'>
+                                                        <img alt='image' src='$url_img'>
                                                     </a>
                                                 </div>
                                                 <div class='media-body col-auto'>
